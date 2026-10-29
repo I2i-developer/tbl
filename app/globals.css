@@ -1236,10 +1236,17 @@ p {
   display: flex;
   gap: 20px;
 }
-.footer-signoff {
-  display: flex;
-  align-items: center;
-  gap: 7px;
+.footer-credit {
+  line-height: 1.8;
+}
+.footer-credit > a {
+  color: var(--deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.footer-credit > a:hover {
+  color: var(--ink);
 }
 .page-intro {
   padding: 85px 0 70px;
@@ -2282,9 +2289,6 @@ p {
   }
   .footer-bottom {
     flex-wrap: wrap;
-  }
-  .footer-signoff {
-    display: none;
   }
   .split-content {
     gap: 35px;

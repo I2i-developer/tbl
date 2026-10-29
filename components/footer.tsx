@@ -67,8 +67,16 @@ export default function Footer() {
             <Link href="/privacy">Privacy policy</Link>
             <Link href="/terms">Terms of use</Link>
           </div>
-          <span className="footer-signoff">
-            Good connections build great things. <ArrowUpRight size={13} />
+          <span className="footer-credit">
+            Designed and created by{" "}
+            <a
+              href="https://github.com/G-Anubhav"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Anubhav Goyal on GitHub (opens in a new tab)"
+            >
+              Anubhav Goyal
+            </a>
           </span>
         </div>
       </div>
