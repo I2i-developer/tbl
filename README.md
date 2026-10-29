@@ -6,6 +6,12 @@ A complete Next.js App Router + React + TypeScript + Tailwind CSS website for TB
 
 `PRD.md` is the source of truth. Shared marketing context lives in `.agents/product-marketing.md`.
 
+## WhatsApp and social link previews
+
+The public production origin defaults to `https://thokbajaolead.vercel.app`. Set `NEXT_PUBLIC_SITE_URL` and rebuild when changing domains. All content pages include Open Graph and Twitter preview tags in their static HTML, with a page-specific description and canonical URL. The shared logo image is `public/images/tbl-social-preview-v1.jpg`, an opaque 1200 × 630 JPEG using the approved TBL artwork.
+
+Regenerate it with `node scripts/create-social-image.mjs`. After building, verify metadata with `node scripts/check-social-metadata.mjs`. If the image changes later, change its versioned filename in `lib/metadata.ts` to avoid reusing a cached image URL. The page and image must be publicly accessible without sign-in; adding tags to a private preview cannot make it crawlable. Actual WhatsApp rendering also depends on the app's link-preview settings.
+
 ## Run locally
 
 Use Node.js 20.9 or later (developed with Node 24).

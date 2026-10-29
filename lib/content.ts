@@ -3,7 +3,10 @@ export const brand = {
   short: "TBL",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
   phone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "",
+  url: (
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+    "https://thokbajaolead.vercel.app"
+  ).replace(/\/+$/, ""),
 };
 export const locations = [
   {

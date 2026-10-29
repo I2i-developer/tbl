@@ -1,3 +1,4 @@
+import { createPageMetadata } from "@/lib/metadata";
 import type { Metadata } from "next";
 import {
   CTA,
@@ -7,11 +8,14 @@ import {
   TickList,
   Button,
 } from "@/components/ui";
-export const metadata: Metadata = {
-  title: "Real estate lead generation services",
-  description:
-    "Explore focused lead generation, project launch campaigns and growth plans for brokers and channel partners with TBL.",
-};
+export const metadata: Metadata = createPageMetadata(
+  {
+    title: "Real estate lead generation services",
+    description:
+      "Explore focused lead generation, project launch campaigns and growth plans for brokers and channel partners with TBL.",
+  },
+  "/services",
+);
 export default function Services() {
   return (
     <>

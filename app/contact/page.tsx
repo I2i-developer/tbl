@@ -1,13 +1,17 @@
+import { createPageMetadata } from "@/lib/metadata";
 import { Check, ArrowUpRight, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import ContactForm from "@/components/contact-form";
 import { Eyebrow } from "@/components/ui";
 import { brand } from "@/lib/content";
-export const metadata = {
-  title: "Let’s talk about your real estate project",
-  description:
-    "Share your real estate project, market and campaign goals with Thok Bajao Lead. Start a focused conversation about your next opportunity.",
-};
+export const metadata = createPageMetadata(
+  {
+    title: "Let’s talk about your real estate project",
+    description:
+      "Share your real estate project, market and campaign goals with Thok Bajao Lead. Start a focused conversation about your next opportunity.",
+  },
+  "/contact",
+);
 export default function Contact() {
   return (
     <section className="container contact-layout section">

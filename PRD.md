@@ -46,6 +46,8 @@ Write concise Indian-English B2B copy. Focus on local market context, project fi
 
 ## 8. Technical architecture
 
+Social sharing: use the public Vercel origin `https://thokbajaolead.vercel.app` by default, configurable through `NEXT_PUBLIC_SITE_URL`. Every content page must expose the approved logo image, title, description and correct page URL through Open Graph metadata in its initial static HTML. Include absolute image URLs, image dimensions/alt text, matching Twitter cards and canonical links. The preview image is an opaque 1200 × 630 JPEG; the share flow must not depend on JavaScript or authenticated access.
+
 Next.js App Router, React, TypeScript, Tailwind CSS v4 through PostCSS. Server-rendered/static-exported pages with client islands for header, directory and form. Static data module is authoritative for locations, services and articles. Generate static params and metadata for dynamic routes, unique page titles/descriptions, robots and sitemap when site origin is configured. Static export in out/ supports commodity hosting and Sites. Native next/link navigation. Locally stored optimized images with descriptive alt text, dimensions/aspect ratios and lazy loading below fold. No secret values in browser variables.
 
 ## 9. Accessibility, privacy, quality

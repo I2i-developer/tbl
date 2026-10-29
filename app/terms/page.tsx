@@ -1,9 +1,13 @@
+import { createPageMetadata } from "@/lib/metadata";
 import { PageIntro } from "@/components/ui";
-export const metadata = {
-  title: "Terms of use",
-  description:
-    "Website information, campaign expectations and use of the TBL project enquiry flow.",
-};
+export const metadata = createPageMetadata(
+  {
+    title: "Terms of use",
+    description:
+      "Website information, campaign expectations and use of the TBL project enquiry flow.",
+  },
+  "/terms",
+);
 export default function Terms() {
   return (
     <>

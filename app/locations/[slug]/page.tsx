@@ -1,3 +1,4 @@
+import { createPageMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 import { MapPin, ArrowUpRight } from "lucide-react";
 import { locations } from "@/lib/content";
@@ -20,10 +21,13 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const l = locations.find((x) => x.slug === slug);
-  return {
-    title: `Real estate lead generation in ${l?.name || "your market"}`,
-    description: l?.description,
-  };
+  return createPageMetadata(
+    {
+      title: `Real estate lead generation in ${l?.name || "your market"}`,
+      description: l?.description,
+    },
+    `/locations/${slug}`,
+  );
 }
 export default async function Location({
   params,

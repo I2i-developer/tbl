@@ -1,3 +1,4 @@
+import { createPageMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 import { articles } from "@/lib/content";
 import { CTA, BackLink, Eyebrow } from "@/components/ui";
@@ -12,7 +13,10 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const a = articles.find((x) => x.slug === slug);
-  return { title: a?.title, description: a?.excerpt };
+  return createPageMetadata(
+    { title: a?.title, description: a?.excerpt },
+    `/resources/${slug}`,
+  );
 }
 export default async function Article({
   params,

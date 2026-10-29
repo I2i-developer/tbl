@@ -1,10 +1,14 @@
+import { createPageMetadata } from "@/lib/metadata";
 import { CTA, PageIntro } from "@/components/ui";
 import { faqs } from "@/lib/content";
-export const metadata = {
-  title: "Frequently asked questions",
-  description:
-    "Straight answers about TBL’s real estate lead generation, markets, campaign scope, lead relevance and project enquiries.",
-};
+export const metadata = createPageMetadata(
+  {
+    title: "Frequently asked questions",
+    description:
+      "Straight answers about TBL’s real estate lead generation, markets, campaign scope, lead relevance and project enquiries.",
+  },
+  "/faq",
+);
 export default function FAQ() {
   return (
     <>

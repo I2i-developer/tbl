@@ -1,10 +1,14 @@
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { PageIntro } from "@/components/ui";
-export const metadata = {
-  title: "Privacy policy",
-  description:
-    "How the TBL website handles project enquiry details and website data.",
-};
+export const metadata = createPageMetadata(
+  {
+    title: "Privacy policy",
+    description:
+      "How the TBL website handles project enquiry details and website data.",
+  },
+  "/privacy",
+);
 export default function Privacy() {
   return (
     <>

@@ -1,3 +1,4 @@
+import { createPageMetadata } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 import { services, steps } from "@/lib/content";
 import {
@@ -19,7 +20,10 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const s = services.find((x) => x.slug === slug);
-  return { title: s?.title, description: s?.description };
+  return createPageMetadata(
+    { title: s?.title, description: s?.description },
+    `/services/${slug}`,
+  );
 }
 export default async function Service({
   params,

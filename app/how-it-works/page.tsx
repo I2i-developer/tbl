@@ -1,10 +1,14 @@
+import { createPageMetadata } from "@/lib/metadata";
 import { CTA, PageIntro, Eyebrow, Button } from "@/components/ui";
 import { steps } from "@/lib/content";
-export const metadata = {
-  title: "How our approach works",
-  description:
-    "From project brief and audience planning to enquiry handover and sales feedback: explore the TBL approach.",
-};
+export const metadata = createPageMetadata(
+  {
+    title: "How our approach works",
+    description:
+      "From project brief and audience planning to enquiry handover and sales feedback: explore the TBL approach.",
+  },
+  "/how-it-works",
+);
 export default function HowItWorks() {
   return (
     <>

@@ -1,12 +1,16 @@
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { articles } from "@/lib/content";
 import { CTA, PageIntro } from "@/components/ui";
-export const metadata = {
-  title: "Real estate marketing insights & guides",
-  description:
-    "Practical guides on campaign planning, relevant property enquiries and sales follow-up for real estate teams.",
-};
+export const metadata = createPageMetadata(
+  {
+    title: "Real estate marketing insights & guides",
+    description:
+      "Practical guides on campaign planning, relevant property enquiries and sales follow-up for real estate teams.",
+  },
+  "/resources",
+);
 export default function Resources() {
   return (
     <>

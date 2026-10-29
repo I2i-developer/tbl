@@ -1,10 +1,14 @@
+import { createPageMetadata } from "@/lib/metadata";
 import { CTA, PageIntro, Eyebrow, Button } from "@/components/ui";
 import { Compass, Handshake, Target } from "lucide-react";
-export const metadata = {
-  title: "About TBL — 15 years of real estate connections",
-  description:
-    "Get to know Thok Bajao Lead: 15 years of experience, 14 Indian markets and a local perspective on real estate lead generation.",
-};
+export const metadata = createPageMetadata(
+  {
+    title: "About TBL — 15 years of real estate connections",
+    description:
+      "Get to know Thok Bajao Lead: 15 years of experience, 14 Indian markets and a local perspective on real estate lead generation.",
+  },
+  "/about",
+);
 export default function About() {
   return (
     <>
